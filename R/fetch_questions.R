@@ -20,7 +20,7 @@ fetch_questions <- function(start_date, end_date, session_start = NULL, session_
   url_base <- paste0("+session%3A", session_start, "%2F", session_end,
                      "+legislature%3A%22House+of+Commons%22", collapse = ", ")
 
-  pb <- dplyr::progress_estimated(length(dates$start_day))
+  pb <- progress::progress_bar$new(total = length(dates$start_day))
 
   questions_data <- purrr::pmap_dfr(dates, function(start_day, start_month, start_year, end_day, end_month, end_year) {
 
@@ -28,7 +28,7 @@ fetch_questions <- function(start_date, end_date, session_start = NULL, session_
                   "%28tabled+OR+answered+OR+holding%29+date%3A", start_day, "%2F", start_month, "%2F",
                   start_year, "..", end_day, "%2F", end_month, "%2F", end_year, url_base, collapse = ", ")
 
-    pb$tick()$print()
+    pb$tick()
 
     df <- download_csv(url)
 

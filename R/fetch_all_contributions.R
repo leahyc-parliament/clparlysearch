@@ -21,7 +21,7 @@ fetch_all_contributions <- function(start_date, end_date, session_start = NULL, 
                      "+legislature%3A%22House+of+Commons%22-status%3A%28withdrawn+OR+tabled%29",
                      collapse = ", ")
 
-  pb <- dplyr::progress_estimated(length(dates$start_day))
+  pb <- progress::progress_bar$new(total = length(dates$start_day))
 
   get_data <- purrr::pmap_dfr(dates, function(start_day, start_month, start_year,
                                               end_day, end_month, end_year) {
@@ -30,7 +30,7 @@ fetch_all_contributions <- function(start_date, end_date, session_start = NULL, 
                   start_day, "%2F", start_month, "%2F", start_year, "..", end_day, "%2F", end_month, "%2F",
                   end_year, url_base, collapse = ", ")
 
-    pb$tick()$print()
+    pb$tick()
 
     df <- download_csv(url)
 
