@@ -1,0 +1,32 @@
+Package: clparlysearch
+Type: Package
+Title: Download data on Members' activities in Parliament from parliamentary search
+Version: 0.1.1
+Author: Elise Uberoi
+Maintainer: Elise Uberoi <eliseuberoi@gmail.com>
+Description: This package enables users to get data on Members' activities in Parliament:
+    their contributions to debates, the questions they ask and the Early Day Motions they
+    sign. The package gives a row for each activity for each MP in a defined period. 
+    Data is retrieved from Parliamentary Search.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+  dplyr,
+  httr,
+  janitor,
+  jsonlite,
+  lubridate,
+  magrittr,
+  purrr,
+  readr,
+  rlang,
+  stringr,
+  textclean,
+  tibble,
+  tidyr,
+  urltools
+Suggests:
+    testthat (>= 3.0.0)
+RoxygenNote: 7.1.1
+Config/testthat/edition: 3
