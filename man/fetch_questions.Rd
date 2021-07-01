@@ -4,16 +4,12 @@
 \alias{fetch_questions}
 \title{Get Parliamentary Questions data for a defined period}
 \usage{
-fetch_questions(start_date, end_date, session_start = NULL, session_end = NULL)
+fetch_questions(start_date, end_date)
 }
 \arguments{
 \item{start_date}{The start date of the period for which PQs are downloaded}
 
 \item{end_date}{The end date of the period for which PQs are downloaded}
-
-\item{session_start}{The start year of the session in which PQs were asked}
-
-\item{session_end}{The end year of the session in which PQs were asked}
 }
 \value{
 A tibble containing PQs asked along with details such as member, date, and subject

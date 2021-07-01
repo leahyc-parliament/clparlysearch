@@ -18,6 +18,8 @@ Imports:
   jsonlite,
   lubridate,
   magrittr,
+  mockery,
+  progress,
   purrr,
   readr,
   rlang,

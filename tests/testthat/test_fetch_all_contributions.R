@@ -35,10 +35,9 @@ test_that("fetch_all_contributions processes results correctly.", {
     "procedure",
     "web_location")
 
-  obs <- fetch_all_contributions("2021-05-20", "2021-05-27", 21, 22)
+  obs <- fetch_all_contributions("2021-05-20", "2021-05-27")
   exp <- readRDS("data/fetch_all_contributions_data.RData")
   compare_obs_exp(obs, exp, cols, "ref")
 })
 
 
-# TEST PASSED BUT ONLY IF RUN MANUALLY

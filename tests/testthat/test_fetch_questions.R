@@ -39,11 +39,11 @@ test_that("fetch_questions processes results correctly.", {
     "procedure",
     "web_location")
 
-  obs <- fetch_questions("2020-03-02", "2020-03-09", 19, 21)
+  obs <- fetch_questions("2020-03-02", "2020-03-09")
   exp <- readRDS("data/fetch_questions_data.RData")
   compare_obs_exp(obs, exp, cols, "ref")
 })
 
-# TEST PASSED BUT ONLY IF SOURCED MANUALLY
+
 
 

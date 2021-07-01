@@ -4,21 +4,15 @@
 #'
 #' @param start_date The start date of the period for which PQs are downloaded
 #' @param end_date The end date of the period for which PQs are downloaded
-#' @param session_start The start year of the session in which PQs were asked
-#' @param session_end The end year of the session in which PQs were asked
 #' @return A tibble containing PQs asked along with details such as member, date, and subject
 #' @export
 #'
 
-fetch_questions <- function(start_date, end_date, session_start = NULL, session_end = NULL) {
-
-  if (is.null(session_start)) stop("No session start year has been provided")
-  if (is.null(session_end)) stop("No session end year has been provided")
+fetch_questions <- function(start_date, end_date) {
 
   dates <- generate_dates(start_date, end_date)
 
-  url_base <- paste0("+session%3A", session_start, "%2F", session_end,
-                     "+legislature%3A%22House+of+Commons%22", collapse = ", ")
+  url_base <- "+legislature%3A%22House+of+Commons%22"
 
   pb <- progress::progress_bar$new(total = length(dates$start_day))
 
