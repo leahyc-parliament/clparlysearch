@@ -4,16 +4,12 @@
 \alias{fetch_debate}
 \title{Get contributions data for a specific debate}
 \usage{
-fetch_debate(title, date, session_start = NULL, session_end = NULL)
+fetch_debate(title, date)
 }
 \arguments{
 \item{title}{The title of the debate (e.g. "Brexit transition")}
 
 \item{date}{The date of the debate ("yyyy-mm-dd")}
-
-\item{session_start}{The start year of the session in which contributions were made (yy)}
-
-\item{session_end}{The end year of the session in which contributions were made (yy)}
 }
 \value{
 A tibble containing contributions along with details such as Member, date, and subject

@@ -4,21 +4,12 @@
 \alias{fetch_chamber_contributions}
 \title{Get contributions data for a defined period}
 \usage{
-fetch_chamber_contributions(
-  start_date,
-  end_date,
-  session_start = NULL,
-  session_end = NULL
-)
+fetch_chamber_contributions(start_date, end_date)
 }
 \arguments{
 \item{start_date}{The start date of the period for which contributions are downloaded ("yyyy-mm-dd")}
 
 \item{end_date}{The end date of the period for which contributions are downloaded ("yyyy-mm-dd")}
-
-\item{session_start}{The start year of the session in which contributions were made (yy)}
-
-\item{session_end}{The end year of the session in which contributions were made (yy)}
 }
 \value{
 A tibble containing contributions along with details such as member, date, and subject

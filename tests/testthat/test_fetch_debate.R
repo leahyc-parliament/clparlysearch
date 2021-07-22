@@ -31,9 +31,9 @@ test_that("fetch_debate processes results correctly.", {
     "web_location"
     )
 
-  obs <- fetch_debate("Agricultural Exports from Australia: Tariffs", "2021-05-27", 21, 22)
+  obs <- fetch_debate("Agricultural Exports from Australia: Tariffs", "2021-05-27")
   exp <- readRDS("data/fetch_debate_data.RData")
   compare_obs_exp(obs, exp, cols, "ref")
 })
 
-# ERROR: ARGUMENT 15 IS EMPTY
+
