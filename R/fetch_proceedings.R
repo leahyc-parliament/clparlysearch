@@ -21,11 +21,9 @@ get_urls <- function(session_start, session_end){
                         session_start, "%2F", session_end,
                         "+legislature%3A%22House+of+Commons%22", collapse = ", ")
   # Data on westminster hall debates
-  url_wh <- paste0("https://search.parliament.uk/export?q=type%3ADebates+place%3A%22Westminster+Hall", "
-                   %22+session%3A", session_start, "%2F", session_end,
-                    "+legislature%3A%22House+of+Commons%22+-type%3A%28%22e-petition+debates", "
-                   %22+OR+%22backbench+debates%22+OR+%22debates+on+select+committee+reports%22%29&", "
-                   rows=10&view=default&s=date", collapse = ", ")
+  url_wh <- paste0("https://search.parliament.uk/export?q=type%3ADebates+place%3A%22Westminster+Hall%22+session%3A",
+                   session_start, "%2F", session_end,
+                   "+legislature%3A%22House+of+Commons%22+-type%3A%28%22e-petition+debates%22+OR+%22backbench+debates%22+OR+%22debates+on+select+committee+reports%22%29&rows=10&view=default&s=date", collapse = ", ")
 
   list(url_adj_ed, url_uq_bbb, url_wh)
 
