@@ -1,7 +1,7 @@
 Package: clparlysearch
 Type: Package
 Title: Download data on Members' activities in Parliament from parliamentary search
-Version: 0.1.1
+Version: 0.1.2
 Author: Elise Uberoi
 Maintainer: Elise Uberoi <eliseuberoi@gmail.com>
 Description: This package enables users to get data on Members' activities in Parliament:
